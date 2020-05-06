@@ -1,26 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.scss';
-import ReactCanvasNest from 'react-canvas-nest';
-class App extends React.Component {
+//import ReactCanvasNest from 'react-canvas-nest';
+import Homepage from './cps/homepage/homepage'
+
+class App extends Component {
+
     render() {
         return ( 
-          <div className = 'App' > 
-          <div className = 'logo' >WiSM</div> 
-          <ReactCanvasNest className = 'canvasNest'
-            config = {
-                {
-                    count: 99,
-                    pointColor: ' 255, 255, 255',
-                    pointR: '0.5',
-                    pointOpacity: '0.7',
-                    dist: 5000,
-                    lineColor: '255, 0, 0',
-                    lineWidth: '0.8',
-                    follow: true,
-                    mouseDist: 15000
-                }
-            }
-            /> < /div > )
+            <div className = 'App' >
+            <div className = 'logo' > WiSM </div>  
+            <Homepage />
+            <div className="content content--canvas">
+                <h2 className="content__title">Aurora</h2>
+            </div>
+            </div>
+        )
     }
 }
 export default App;
